@@ -17,7 +17,6 @@ The data is derived from publicly available hotel booking datasets and has been 
 ## 🧹 Data Preparation Steps
 - Removed null and duplicate records.
 - Replaced binary values (e.g., is_canceled) with descriptive labels (“Canceled” / “Not Canceled”).
-- Standardized categorical fields such as meal types (BB, HB, FB, SC).
 - Converted date fields into year and month formats for time-series analysis.
 - Created calculated measures for key performance indicators (e.g., Total Revenue, Booking Ratio, Average Daily Rate).
 
@@ -59,15 +58,13 @@ Created derived columns such as:
 
 4. Data Filtering
 
-Removed records with adr ≤ 0 or unrealistic stay lengths.
-
-Filtered data to include only bookings between 2018 and 2020.
+- Removed records with adr ≤ 0 or unrealistic stay lengths.
 
 5. Feature Engineering
 
-Extracted Month and Year from date fields for time-based analysis.
+- Extracted Month and Year from date fields for time-based analysis.
 
-Created calculated measures in Power BI:
+- Created calculated measures in Power BI:
 
 Total Revenue = SUMX(Hotel_Data, Hotel_Data[Revenue])
 
@@ -75,9 +72,9 @@ Booking Ratio = COUNT(Bookings) / COUNT(Total Possible Bookings)
 
 6. Validation
 
-Cross-checked totals and averages against raw data exports.
+- Cross-checked totals and averages against raw data exports.
 
-Ensured consistency in customer segment and market channel classifications.
+- Ensured consistency in customer segment and market channel classifications.
 
 ## 🧾 Outcome
 
@@ -88,10 +85,24 @@ The dataset was clean, structured, and analysis-ready.
 All key metrics could be accurately visualized and aggregated across years, customer types, and market segments.
 
 The final dataset was used to power an interactive Power BI dashboard for hotel performance insights.
+# 📊 Visualization and Charts
+To better understand booking patterns, customer behavior, and revenue performance, a series of interactive visualizations were created in Power BI.
+These visuals help management quickly identify trends, outliers, and key growth drivers between 2018 and 2020.
 
 <img width="580" height="332" alt="image" src="https://github.com/user-attachments/assets/f934467a-2767-4281-adbf-191ad3af5ec2" />
 <img width="589" height="336" alt="image" src="https://github.com/user-attachments/assets/a25c2485-90b4-4de2-9456-888628316ebc" />
 
 ## Data Modelling and Relationship
-<img width="735" height="362" alt="image" src="https://github.com/user-attachments/assets/3e2846b0-d2b8-4390-9921-41e25b033286" />
+The data model was designed using a star schema, where the central fact table — Hotel_Data — connects to several dimension tables that provide descriptive context. This structure enables efficient querying, aggregation, and dashboard creation in Power BI. The Hotel_Data table serves as the core fact table that stores transactional details of each hotel booking.
+
+## Model Type:
+
+Schema: Star Schema
+
+Relationship Type: One-to-Many (1→*)
+
+Cross Filter Direction: Single
+
+Primary Keys: Each dimension table has a unique identifier used to connect to the fact table.
+<img width="735" height="362" alt="image" src="https://github.com/user-attachments/assets/3e2846b0-d2b8-4390-9921-41e25b033286" /> 
 
