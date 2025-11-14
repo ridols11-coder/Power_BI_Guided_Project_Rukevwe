@@ -19,6 +19,8 @@ The data is derived from publicly available hotel booking datasets and has been 
 - Replaced binary values (e.g., is_canceled) with descriptive labels (“Canceled” / “Not Canceled”).
 - Converted date fields into year and month formats for time-series analysis.
 - Created calculated measures for key performance indicators (e.g., Total Revenue, Booking Ratio, Average Daily Rate).
+# Dataset before cleaning
+<img width="932" height="341" alt="image" src="https://github.com/user-attachments/assets/6665cac5-a34c-4606-86cf-50e31f89fadc" />
 
 ## Preprocess the dataset
   Before analysis, the dataset was thoroughly cleaned and transformed in Power Query to ensure consistency, accuracy, and usability for dashboard visualization. The preprocessing steps focused on removing errors, standardizing formats, and creating meaningful calculated columns and measures to support insights generation.
@@ -75,6 +77,9 @@ Booking Ratio = COUNT(Bookings) / COUNT(Total Possible Bookings)
 - Cross-checked totals and averages against raw data exports.
 
 - Ensured consistency in customer segment and market channel classifications.
+  
+# Dataset After Cleaning
+<img width="929" height="333" alt="image" src="https://github.com/user-attachments/assets/6209221f-ee20-4c02-a1ad-9d81456bb051" />
 
 ## 🧾 Outcome
 
@@ -104,5 +109,54 @@ Relationship Type: One-to-Many (1→*)
 Cross Filter Direction: Single
 
 Primary Keys: Each dimension table has a unique identifier used to connect to the fact table.
-<img width="735" height="362" alt="image" src="https://github.com/user-attachments/assets/3e2846b0-d2b8-4390-9921-41e25b033286" /> 
+<img width="752" height="365" alt="image" src="https://github.com/user-attachments/assets/97b7f266-400d-4345-809d-306313be85d0" />
+
+# Recommendations
+
+1️. Leverage Online Channels Strategically
+
+Since Online Travel Agencies (OTA) drive the majority of bookings and revenue, continue leveraging them — but optimize commissions by:
+- Encouraging guests to book directly on the hotel’s website with loyalty points, small discounts, or added perks (free breakfast, late check-out).
+- Using OTAs primarily as a discovery platform while converting repeat guests into direct bookers.
+
+2️. Boost Low-Season Occupancy
+
+The arrival date trend shows booking peaks between July and September, meaning off-peak months (January–April, October–December) need targeted campaigns. Strategies:
+- Offer seasonal discounts or event packages to attract guests in low-demand months.
+- Partner with local attractions or tourism boards to create bundled experiences.
+- Use email campaigns targeting previous guests with special mid-season offers.
+
+3️. Maximize Revenue per Booking
+
+Despite fewer bookings in 2020, revenue held steady, implying higher ADR (Average Daily Rate) or longer stays. To build on this:
+- Continue promoting premium room types and add-on services (spa, dining, experiences).
+- Implement dynamic pricing — adjusting rates based on demand and seasonality.
+- Upsell through digital check-in or confirmation emails.
+
+4️. Diversify Market Segments
+
+Current revenue is heavily dependent on Transient guests and Online TA.
+To balance risk:
+- Target Corporate and Group segments with negotiated rates or meeting packages.
+- Collaborate with travel agencies and event planners for steady business bookings.
+- Expand marketing to international segments beyond Portugal and the UK.
+
+5️. Enhance Guest Experience & Retention
+
+- High reliance on first-time or transient guests suggests an opportunity to build loyalty.
+- Launch a guest rewards or membership program.
+- Use feedback surveys to identify improvement areas.
+- Personalize guest communication to improve repeat booking rates.
+
+6️. Optimize Weekday Performance
+
+The dashboard shows weekends dominate bookings and revenue.
+Introduce weekday promotions, such as:
+- “Work-from-hotel” packages
+- Midweek stay discounts
+- Corporate day-use rates
+- Partner with local businesses for weekday retreats or conferences.
+
+
+
 
