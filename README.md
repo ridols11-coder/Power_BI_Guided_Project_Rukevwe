@@ -1,4 +1,6 @@
 # Hotel Booking Performance (2018-2020)
+<img width="1366" height="608" alt="image" src="https://github.com/user-attachments/assets/17786b2f-35a9-4ed2-832a-c35aa612e819" />
+
 ## 🏨 Business Problem
 Between 2018 and 2020, the hotel experienced fluctuations in bookings and revenue, but the underlying factors driving these changes remain unclear. The management team seeks a comprehensive understanding of the hotel’s performance across this three-year period to make data-informed strategic decisions. Specifically, there is a need to analyze booking patterns, revenue trends, and customer behavior to identify which market segments, booking channels, and customer types contribute most to the hotel’s growth, and which areas present opportunities for improvement.
 
